@@ -1,0 +1,181 @@
+body {font-family: Arial, Helvetica, sans-serif;
+MARGIN: 0;
+}
+
+#carrusel {
+    float:left;
+    width:600px;
+    overflow:hidden;
+    height:203px;
+    position:relative;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+#titulo-videos{
+    background-image: linear-gradient(rgba(255, 255, 255, 0),rgba(255, 255, 255, 0)),url("./static/img/header-videos.png");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    padding-bottom: 400px;
+}
+ 
+#carrusel .left-arrow {
+    position:absolute;
+    left:10px;
+    z-index:1;
+    top:50%;
+    margin-top:-9px;
+}
+ 
+#carrusel .right-arrow {
+    position:absolute;
+    right:10px;
+    z-index:1;
+    top:50%;
+    margin-top:-9px;
+}
+ 
+.carrusel {
+    width:4000px;
+    left:0px;
+    position:absolute;
+    z-index:0;
+}
+
+.bg-videos{
+  padding-top: 10%;
+
+}
+
+.bg-videos h1{
+  font-size:40px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+.bg-videos h2{
+  font-size: 30px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+ 
+.carrusel>div {
+    float: left;
+    height: 203px;
+    margin-right: 5px;
+    width: 195px;
+    text-align:center;
+}
+ 
+.carrusel img {
+    cursor:pointer;
+}
+ 
+.product {
+    border:#CCCCCC 1px solid;
+}
+
+
+footer{
+  background-color: grey;
+  color: white;
+  text-align: center;
+  border: 1.5em solid grey;
+}
+
+.principal{
+  text-align: center;
+  color: #7939FF;
+  text-shadow: 11px 5px 16px #7939FF;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color:#e9e9e9c3;
+  font-size: 90px;
+  border: 0;
+}
+
+.principal2{
+  text-align: center;
+  color: #39e1ff;
+  text-shadow: 11px 5px 16px #39e1ff95;
+  font-family: cursive;
+  background-color:#e9e9e9c3;
+  font-size: 90px;
+  border: 0;
+}
+/*-------------------Estilos de recursos--------*/
+.titleRecursos{
+    text-align: center;
+    background-color:#e9e9e9;
+    border: 0;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+    border:0px;
+    margin: 0px;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    align-content: center;
+    text-align: center;
+  }
+  .wrapper h1{
+    font-size:50px;
+  }
+  .topnav a.home {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  .topnav .search-container {
+    float: right;
+  }
+  
+  .topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  .topnav .search-container button {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: greenyellow;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .topnav .search-container button:hover {
+    background: #ccc;
+  }
+  .carousel {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+#imagen {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+}
