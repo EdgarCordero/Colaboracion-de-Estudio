@@ -179,3 +179,18 @@ footer{
     height: 400px;
     background-size: cover;
 }
+
+#retroceder, #avanzar{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}

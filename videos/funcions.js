@@ -3,9 +3,9 @@ window.onload = function () {
     const IMAGENES = [
         '../static/img/vapor1.jpg',
         '../static/img/vapor2.jpg',
-        '../static/img/vapor3.jpg'
+        '../static/img/vapor3.jpg',
     ];
-    const TIEMPO_INTERVALO_MILESIMAS_SEG = 1000;
+    const TIEMPO_INTERVALO_MILESIMAS_SEG = 3000;
     let posicionActual = 0;
     let $botonRetroceder = document.querySelector('#retroceder');
     let $botonAvanzar = document.querySelector('#avanzar');
@@ -26,18 +26,21 @@ window.onload = function () {
             posicionActual++;
         }
         renderizarImagen();
+        inicioImagen();
     }
 
     /**
      * Funcion que cambia la foto en la anterior posicion
      */
     function retrocederFoto() {
+        
         if(posicionActual <= 0) {
             posicionActual = IMAGENES.length - 1;
         } else {
             posicionActual--;
         }
         renderizarImagen();
+        inicioImagen();
     }
 
     /**
@@ -46,37 +49,17 @@ window.onload = function () {
     function renderizarImagen () {
         $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
     }
-
-    /**
-     * Activa el autoplay de la imagen
-     */
-    function playIntervalo() {
-        intervalo = setInterval(pasarFoto, TIEMPO_INTERVALO_MILESIMAS_SEG);
-        // Desactivamos los botones de control
-        $botonAvanzar.setAttribute('disabled', true);
-        $botonRetroceder.setAttribute('disabled', true);
-        $botonPlay.setAttribute('disabled', true);
-        $botonStop.removeAttribute('disabled');
-
-    }
-
-    /**
-     * Para el autoplay de la imagen
-     */
-    function stopIntervalo() {
+    function inicioImagen () {
         clearInterval(intervalo);
-        // Activamos los botones de control
-        $botonAvanzar.removeAttribute('disabled');
-        $botonRetroceder.removeAttribute('disabled');
-        $botonPlay.removeAttribute('disabled');
-        $botonStop.setAttribute('disabled', true);
+        intervalo = setInterval(pasarFoto, TIEMPO_INTERVALO_MILESIMAS_SEG);
     }
 
+    
     // Eventos
     $botonAvanzar.addEventListener('click', pasarFoto);
     $botonRetroceder.addEventListener('click', retrocederFoto);
     $botonPlay.addEventListener('click', playIntervalo);
     $botonStop.addEventListener('click', stopIntervalo);
     // Iniciar
-    renderizarImagen();
-} 
+    inicioImagen();
+}  
